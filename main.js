@@ -65,13 +65,7 @@ playButton.addEventListener("click", function () {
 
 })
 
-
 // FUNCTION CREATED TO REPEAT THE CODE
-function squareDivOutput(squareDiv, i) {
-    squareDiv.style.backgroundColor = "blue";
-    console.log("box number is:", i);
-
-}
 
 function createSquareDiv(className, i) {
     const squareDiv = document.createElement("div");
@@ -79,11 +73,13 @@ function createSquareDiv(className, i) {
     grid.appendChild(squareDiv);
     squareDiv.innerHTML = `${[i]}`;
     squareDiv.addEventListener("click", function () {
-        squareDivOutput(squareDiv, i); // created a funciton and saved the following code lines
-        /*                 squareDiv.style.backgroundColor = "blue"
-                        console.log("box number is:", i) */
+
+        squareDiv.style.backgroundColor = "blue";
+        console.log("box number is:", i)
+
 
     });
+    
     return squareDiv; // Return the created div 
 }
 
